@@ -1,0 +1,35 @@
+@import './assets/fonts/Poppins/stylesheet.css';
+@import './assets/fonts/Aleo/stylesheet.css';
+@import 'tailwindcss/tailwind.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html, body, #root {
+    min-height: 100%;
+    height: 100%;
+}
+
+:root {
+    --scrollbar-color: #D3D8E1;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+}
+
+.page-container {
+    background: linear-gradient(-45deg, #ffe2d3, #a6dee2, #cfc2fc);
+}
+
+.page-container.dark {
+    background: linear-gradient(-45deg, #543728, #173a3c, #2e2158);
+}
