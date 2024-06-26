@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import useThemeStore from "../../stores/themeStore";
 import Icon from "../Icon/Icon";
 import {addNewLine} from "../../utils/utils";
@@ -9,6 +9,20 @@ import {useTranslation} from "react-i18next";
 const Sidebar = () => {
     const {darkMode} = useThemeStore();
     const { t } = useTranslation();
+
+    const [width, setWidth] = useState(window.innerWidth);
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+    const isMediumScreen = width <= 1280;
 
     const socials = [
         {id: 1, icon: 'instagram', color: 'text-pink-600', link: 'https://www.instagram.com/bozkurtozdemir'},
@@ -33,7 +47,7 @@ const Sidebar = () => {
             darkMode ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
         }`}>
             <div className="flex flex-col flex-wrap items-center justify-center">
-                <img src={photo} className="-mt-48 mb-8 object-contain rounded-2xl md:object-scale-down"
+                <img src={photo} className={` mb-8 object-contain rounded-2xl md:object-scale-down ${isMediumScreen ? 'w-60' : '-mt-48'}`}
                      alt={'Bozkurt Ozdemir'}/>
                 <h2 className={`text-3xl font-bold font-title inline-flex mb-4 ${darkMode ? 'text-white' : 'text-slate-900'}`}>Bozkurt
                     Ozdemir</h2>

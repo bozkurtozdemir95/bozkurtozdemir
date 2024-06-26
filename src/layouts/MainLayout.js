@@ -20,12 +20,17 @@ const MainLayout = ({children}) => {
     // const isMobile = width <= 768;
 
     return (
-        <div className="container mx-auto relative font-body pb-8  pt-48">
+        <div className={`container mx-auto relative font-body pb-8 ${isMediumScreen ? 'pt-0' : ' pt-48'}`}>
             <div className="grid grid-cols-12 gap-5">
                 { !isMediumScreen &&
                 <div className="grid col-span-3 sticky top-0 h-fit pt-48 -mt-48">
                     <Sidebar/>
                 </div>
+                }
+                {isMediumScreen &&
+                    <div className="grid col-span-12">
+                        <Sidebar/>
+                    </div>
                 }
                 <div className="grid col-span-12 xl:col-span-8 h-fit">
                     {children}

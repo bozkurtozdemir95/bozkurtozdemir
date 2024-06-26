@@ -9,6 +9,7 @@ import {useTranslation} from "react-i18next";
 const Menu = () => {
     const {darkMode} = useThemeStore();
     const { t } = useTranslation();
+
     return (
         <div className={`py-4 flex justify-center rounded-2xl ${
             darkMode ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
