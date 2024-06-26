@@ -79,10 +79,10 @@ const Header = () => {
             {isMediumScreen &&
                 <div
                     className={classNames('w-full absolute z-20 top-full left-0 rounded-xl overflow-hidden shadow-lg transition-max-height', {
-                        'bg-slate-300 text-slate-900 max-h-96 p-4': !menuVisible && !darkMode,
-                        'bg-slate-800 text-white0 max-h-0': !menuVisible && darkMode,
+                        'bg-slate-300 text-slate-900 max-h-96 p-4': menuVisible && !darkMode,
+                        'bg-slate-800 text-white max-h-0': !menuVisible && !darkMode,
                         'bg-slate-800 text-white max-h-96 p-4': menuVisible && darkMode,
-                        'bg-slate-300 text-slate-900 max-h-0': menuVisible && !darkMode,
+                        'bg-slate-300 text-slate-900 max-h-0': !menuVisible && darkMode,
                     })}>
                     <ul className="flex flex-col">
 
