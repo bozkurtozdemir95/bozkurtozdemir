@@ -4,9 +4,11 @@ import Icon from "../Icon/Icon";
 import menu from "../../stores/menu";
 import {classNames} from "../../utils/utils";
 import { NavLink } from 'react-router-dom';
+import {useTranslation} from "react-i18next";
 
 const Menu = () => {
     const {darkMode} = useThemeStore();
+    const { t } = useTranslation();
     return (
         <div className={`py-4 flex justify-center rounded-2xl ${
             darkMode ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
@@ -22,7 +24,7 @@ const Menu = () => {
                                        'bg-slate-300 text-slate-800': !isActive && !darkMode,
                                    })}>
                                     <Icon name={e.icon} color={"currentColor"}/>
-                                    <span className={classNames('mt-1 text-xs font-semibold')}>{e.name}</span>
+                                    <span className={classNames('mt-1 text-xs font-semibold')}>{t(e.name)}</span>
                                 </NavLink>
                             </li>
                         )

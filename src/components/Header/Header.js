@@ -25,7 +25,7 @@ const Header = () => {
 
 
     return (
-        <div className="container mx-auto py-8 mb-16">
+        <div className="container mx-auto py-8 mb-8">
             <div className="flex justify-between items-start">
                 <img src={logo} className="max-w-40" alt={'Bozkurt Ozdemir'}/>
                 <div className="flex items-center">

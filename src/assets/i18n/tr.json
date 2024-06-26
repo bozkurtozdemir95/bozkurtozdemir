@@ -1,5 +1,36 @@
 {
   "translation": {
-    "headerTitle": "My {{appName}} Header Title"
+    "Phone": "Telefon",
+    "Location": "Konum",
+    "FrontendDeveloper": "Arayüz Geliştirici",
+    "About": "Hakkında",
+    "Resume": "Özgeçmiş",
+    "Works": "Projeler",
+    "Contact": "İletişim",
+    "AboutDescription1": "İstanbul, Türkiye'den, web geliştirme ve tarayıcı oyunlarında çalışan, kendi kendimi geliştiren bir Arayüz Geliştiricisiyim. Tasarımları kusursuz, pixel-perfect ve yaratıcı kodlara dönüştürmeyi seviyorum",
+    "AboutDescription2": "Amacım kolaylık, performans, responsive ve temiz koda odaklanan kullanıcı arayüzleri oluşturmaktır. Birçok oyun ve web sitesi projesinde çalıştım.",
+    "WhatIDo": "Neler Yapıyorum?",
+    "UIUXDevelopment": "UI/UX Development",
+    "UIUXDevelopmentDescription": "Kullanıcı dostu deneyimler için temiz kodlu, yüksek performanslı, responsive arayüzler oluşturma.",
+    "WebsiteDevelopment": "Website Development",
+    "WebsiteDevelopmentDescription": "Cihazlar arasında optimum performans için temiz kodlu, duyarlı ve ölçeklenebilir web siteleri oluşturma.",
+    "3DModelling": "3D Modelleme",
+    "3DModellingDescription": "Boş zamanlarımda objeler ve karakterler yaratmayı seviyorum. Çizim, boyama, tasarlama ve inşa etme konusundaki yaşam boyu tutkumu dolduruyor.",
+    "Experience": "Deneyim",
+    "Skills": "Yetenekler",
+    "Knowledges": "Bilgi",
+    "UIDesign": "UI Tasarım",
+    "MobileAppDevelopment": "Mobil Uygulama Geliştirme",
+    "Macedonia": "K.Makedonya",
+    "Skopje": "Üsküp",
+    "Cyprus": "Kıbrıs",
+    "Tbilisi": "Tiflis",
+    "Batumi": "Batum",
+    "Istanbul": "İstanbul",
+    "Name": "İsim",
+    "Email": "Email",
+    "Message": "Mesaj",
+    "Submit": "Gönder",
+    "DownloadCV": "CV İndir"
   }
 }

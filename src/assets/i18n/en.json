@@ -1,5 +1,36 @@
 {
   "translation": {
-    "headerTitle": "My {{appName}} Header Title"
+    "Phone": "Phone",
+    "Location": "Location",
+    "FrontendDeveloper": "Frontend Developer",
+    "About": "About",
+    "Resume": "Resume",
+    "Works": "Works",
+    "Contact": "Contact",
+    "AboutDescription1": "I'm a self-developed Frontend Developer from Istanbul, Turkey, working in web development and browser games. I enjoy turning designs into clean, pixel-perfect, and creative code",
+    "AboutDescription2": "My goal is to create user interfaces focused on convenience, performance, responsiveness, and clean code. I have worked on many game and website projects.",
+    "WhatIDo": "What I Do?",
+    "UIUXDevelopment": "UI/UX Development",
+    "UIUXDevelopmentDescription": "Crafting high-performance, responsive interfaces with clean code for user friendly experiences.",
+    "WebsiteDevelopment": "Website Development",
+    "WebsiteDevelopmentDescription": "Building responsive and scalable websites with clean code for optimal performance across devices.",
+    "3DModelling": "3D Modelling",
+    "3DModellingDescription": "In my spare time, I love creating objects and characters. It is filling my lifelong passion for drawing, painting, designing, and building",
+    "Experience": "Experience",
+    "Skills": "Skills",
+    "Knowledges": "Knowledges",
+    "UIDesign": "UI Design",
+    "MobileAppDevelopment": "Mobile App Development",
+    "Macedonia": "N.Macedonia",
+    "Skopje": "Skopje",
+    "Cyprus": "Cyprus",
+    "Tbilisi": "Tbilisi",
+    "Batumi": "Batumi",
+    "Istanbul": "Istanbul",
+    "Name": "Name",
+    "Email": "Email",
+    "Message": "Message",
+    "Submit": "Submit",
+    "DownloadCV": "Download CV"
   }
 }
