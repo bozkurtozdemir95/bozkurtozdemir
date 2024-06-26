@@ -35,7 +35,7 @@ const ResumePage = () => {
         {id: 3, type: 'Frontend Development', value: 75},
         {id: 4, type: 'UIDesign', value: 45},
         {id: 5, type: '3DModelling', value: 30},
-        {id: 5, type: 'Backend Development', value: 25},
+        {id: 6, type: 'Backend Development', value: 25},
     ];
 
     const knowledges = [
@@ -46,19 +46,19 @@ const ResumePage = () => {
         {id: 5, type: 'Typescript'},
         {id: 6, type: 'React'},
         {id: 7, type: 'Angular'},
-        {id: 7, type: 'Tailwind'},
-        {id: 7, type: 'Storybook'},
-        {id: 7, type: 'Bootstrap'},
-        {id: 7, type: '3DModelling'},
-        {id: 7, type: 'Blender 3D'},
-        {id: 7, type: 'Laravel'},
-        {id: 7, type: 'Nest JS'},
-        {id: 7, type: 'PHP'},
-        {id: 7, type: 'Material Design'},
-        {id: 7, type: 'Figma'},
-        {id: 7, type: 'Photoshop'},
-        {id: 7, type: 'Adobe XD'},
-        {id: 7, type: 'Ionic'},
+        {id: 8, type: 'Tailwind'},
+        {id: 9, type: 'Storybook'},
+        {id: 10, type: 'Bootstrap'},
+        {id: 11, type: '3DModelling'},
+        {id: 12, type: 'Blender 3D'},
+        {id: 13, type: 'Laravel'},
+        {id: 14, type: 'Nest JS'},
+        {id: 15, type: 'PHP'},
+        {id: 16, type: 'Material Design'},
+        {id: 17, type: 'Figma'},
+        {id: 18, type: 'Photoshop'},
+        {id: 19, type: 'Adobe XD'},
+        {id: 20, type: 'Ionic'},
     ];
 
 
@@ -66,16 +66,16 @@ const ResumePage = () => {
         <div className={`p-6 py-10 md:p-16 rounded-2xl ${
             darkMode ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
         }`}>
-            <h1 className={` pb-3 pr-3 border-b-4 border-b-teal-500 text-4xl font-bold font-title inline-flex mb-4 ${darkMode ? 'text-white' : 'text-slate-900'}`}>{t('Resume')}</h1>
+            <h1 className={` pb-3 pr-3 border-b-4 border-b-lime-500 text-4xl font-bold font-title inline-flex mb-4 ${darkMode ? 'text-white' : 'text-slate-900'}`}>{t('Resume')}</h1>
             <div className="flex my-8">
-                <Icon name={'briefcase'} className={"text-teal-500 mr-4"} size={30}/>
+                <Icon name={'briefcase'} className={"text-lime-500 mr-4"} size={30}/>
                 <h3 className={` ${darkMode ? 'text-white' : 'text-slate-900'} text-2xl font-semibold font-body inline-flex mb-4`}>{t("Experience")}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {experiences.map((experience) => (
                     <div
                         className={`border rounded-lg p-4 flex ${darkMode ? 'border-slate-700' : 'border-slate-300'}`}
-                        key={experience.id}>
+                        key={'exp'+experience.id}>
                         <div className={'w-fit flex flex-col'}>
                             <span
                                 className={` ${darkMode ? 'text-slate-300' : 'text-slate-600'} mb-2 text-xs`}>{experience.start}-{experience.end}</span>
@@ -91,11 +91,11 @@ const ResumePage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 mt-8 gap-8">
                 <div className="grid-col-2 lg:grid-col-1">
                     <div className="flex my-8">
-                        <Icon name={'hammer'} className={"text-teal-500 mr-4"} size={30}/>
+                        <Icon name={'hammer'} className={"text-lime-500 mr-4"} size={30}/>
                         <h3 className={` ${darkMode ? 'text-white' : 'text-slate-900'} text-2xl font-semibold font-body inline-flex mb-4`}>{t("Skills")}</h3>
                     </div>
                     {skills.map((skill) => (
-                        <div className="flex flex-col mb-8" key={skill.id}>
+                        <div className="flex flex-col mb-8" key={'skill'+skill.id}>
                             <div className="flex justify-between mb-2">
                                 <h6 className={`${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>{t(skill.type)}</h6>
                                 <span
@@ -111,12 +111,12 @@ const ResumePage = () => {
                 </div>
                 <div className="grid-col-2 lg:grid-col-1">
                     <div className="flex my-8">
-                        <Icon name={'earth'} className={"text-teal-500 mr-4"} size={30}/>
+                        <Icon name={'earth'} className={"text-lime-500 mr-4"} size={30}/>
                         <h3 className={` ${darkMode ? 'text-white' : 'text-slate-900'} text-2xl font-semibold font-body inline-flex mb-4`}>{t("Knowledges")}</h3>
                     </div>
                     <div className="flex flex-wrap">
                         {knowledges.map((knowledge) => (
-                            <div key={knowledge.id}
+                            <div key={'know'+knowledge.id}
                                  className={`${darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-200 text-slate-600'} px-3 py-1.5 rounded-md text-sm mr-4 mb-4`}>{t(knowledge.type)}</div>
                         ))}
                     </div>

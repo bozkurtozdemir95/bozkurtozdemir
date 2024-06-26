@@ -27,9 +27,9 @@ html, body, #root {
 }
 
 .page-container {
-    background: linear-gradient(-45deg, #ffe2d3, #a6dee2, #cfc2fc);
+    background: linear-gradient(-45deg, #f98b8b, #91b8bb, #a186ff);
 }
 
 .page-container.dark {
-    background: linear-gradient(-45deg, #543728, #173a3c, #2e2158);
+    background: linear-gradient(-45deg, #5d0000, #0a2729, #211449)
 }

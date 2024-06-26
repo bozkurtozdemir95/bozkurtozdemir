@@ -16,11 +16,11 @@ const Menu = () => {
         }`}>
             <ul className="flex flex-col gap-4">
 
-                    {menu.map((e) => {
+                    {menu.map((e, i) => {
                         return (
-                            <li>
+                            <li key={'menu'+i}>
                                 <NavLink to={e.path}  className={ ({ isActive }) => classNames('w-16 h-16 flex flex-col items-center justify-center text-center rounded-lg p-3', {
-                                       'bg-teal-500 text-white': isActive,
+                                       'bg-lime-500 text-white': isActive,
                                        'bg-slate-700 text-slate-400': !isActive && darkMode,
                                        'bg-slate-300 text-slate-800': !isActive && !darkMode,
                                    })}>

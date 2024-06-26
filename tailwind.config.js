@@ -9,7 +9,11 @@ module.exports = {
             'title': ['Aleo'],
             'body': ['Poppins'],
         },
-        extend:{}
+        extend:{
+            transitionProperty: {
+                'max-height': 'max-height'
+            }
+        }
     },
     plugins: [
         require('tailwindcss'),

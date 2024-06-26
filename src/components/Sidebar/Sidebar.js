@@ -56,8 +56,8 @@ const Sidebar = () => {
                 </div>
                 <div className="flex justify-center">
                     {socials.map((social) => (
-                        <a className={`${social.color} ${darkMode ? 'bg-slate-800' : 'bg-slate-200 hover:bg-teal-500'} px-1.5 py-1.5 rounded-md text-sm mr-4 mb-4 hover:text-white [&:last-child]:mr-0`}
-                           key={social.id} href={social.link} target='_blank' rel="noreferrer">
+                        <a className={`${social.color} ${darkMode ? 'bg-slate-800' : 'bg-slate-200 hover:bg-lime-500'} px-1.5 py-1.5 rounded-md text-sm mr-4 mb-4 hover:text-white [&:last-child]:mr-0`}
+                           key={'social'+social.id} href={social.link} target='_blank' rel="noreferrer">
                             <Icon className={'transition-all'} name={social.icon} size={22} color={'currentColor'}/>
                         </a>
                     ))}
@@ -65,6 +65,7 @@ const Sidebar = () => {
                 <div className={`${darkMode ? 'bg-slate-800' : 'bg-slate-200'}  py-6 px-8 rounded-2xl w-full`}>
                     {information.map((information) => (
                         <div
+                            key={'info'+information.id}
                             className={`${darkMode ? 'border-b-slate-700' : 'border-b-slate-300'} py-2.5 flex items-center border-b-2 [&:last-child]:border-b-0`}>
                             <div
                                 className={`${information.color} ${darkMode ? 'bg-slate-900' : 'bg-slate-100 shadow-md'} px-2 py-2 rounded-md text-sm mr-4`}>
@@ -86,7 +87,7 @@ const Sidebar = () => {
                 </div>
 
                 <a href={resume} download="BozkurtOzdemirCV.pdf"
-                   className={'mt-8 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-base px-5 py-3.5 text-center inline-flex items-center me-2 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800'}>
+                   className={'mt-8 text-white bg-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-5 py-3.5 text-center inline-flex items-center me-2 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800'}>
                     <Icon className={'transition-all mr-4'} name={'download'} size={22} color={'white'}/>
                     <span className={`text-md font-body inline-flex text-white`}>{t("DownloadCV")}</span>
                 </a>
