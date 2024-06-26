@@ -17,7 +17,7 @@ const MainLayout = ({children}) => {
     }, []);
 
     const isMediumScreen = width <= 1280;
-    const isMobile = width <= 768;
+    // const isMobile = width <= 768;
 
     return (
         <div className="container mx-auto relative font-body pb-8 pt-48">

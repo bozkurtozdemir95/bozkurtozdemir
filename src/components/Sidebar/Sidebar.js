@@ -29,7 +29,7 @@ const Sidebar = () => {
             darkMode ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
         }`}>
             <div className="flex flex-col flex-wrap items-center justify-center">
-                <img src={photo} className="-mt-48 mb-8 object-contain rounded-2xl md:object-scale-down" alt={''}/>
+                <img src={photo} className="-mt-48 mb-8 object-contain rounded-2xl md:object-scale-down" alt={'Bozkurt Ozdemir'}/>
                 <h2 className={`text-3xl font-bold font-title inline-flex mb-4 ${darkMode ? 'text-white' : 'text-slate-900'}`}>Bozkurt
                     Ozdemir</h2>
                 <div
