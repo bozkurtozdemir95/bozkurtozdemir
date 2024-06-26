@@ -13,3 +13,7 @@ export const classNames = (...args) => {
     });
     return classes.join(' ');
 }
+
+export const addNewLine = (value) => {
+    return value.replace(/\n/g, '<br>');
+}

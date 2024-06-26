@@ -62,7 +62,7 @@ const ResumePage = () => {
 
 
     return (
-        <div className={`p-16 rounded-2xl ${
+        <div className={`p-6 py-10 md:p-16 rounded-2xl ${
             darkMode ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
         }`}>
             <h1 className={` pb-3 pr-3 border-b-4 border-b-teal-500 text-4xl font-bold font-title inline-flex mb-4 ${darkMode ? 'text-white' : 'text-slate-900'}`}>Resume</h1>
@@ -70,10 +70,10 @@ const ResumePage = () => {
                 <Icon name={'briefcase'} className={"text-teal-500 mr-4"} size={30}/>
                 <h3 className={` ${darkMode ? 'text-white' : 'text-slate-900'} text-2xl font-semibold font-body inline-flex mb-4`}>Experience</h3>
             </div>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {experiences.map((experience) => (
                     <div
-                        className={`grid-col-2 sm:grid-col-1 border rounded-lg p-4 flex ${darkMode ? 'border-slate-700' : 'border-slate-300'}`}
+                        className={`border rounded-lg p-4 flex ${darkMode ? 'border-slate-700' : 'border-slate-300'}`}
                         key={experience.id}>
                         <div className={'w-fit flex flex-col'}>
                             <span
@@ -87,7 +87,7 @@ const ResumePage = () => {
                 ))}
 
             </div>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-8 gap-8">
                 <div className="grid-col-2 lg:grid-col-1">
                     <div className="flex my-8">
                         <Icon name={'hammer'} className={"text-teal-500 mr-4"} size={30}/>
