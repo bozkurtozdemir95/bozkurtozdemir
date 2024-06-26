@@ -14,7 +14,7 @@ const ThemeSwitcher = () => {
                 'bg-slate-900 text-white': darkMode,
             })}
         >
-            <Icon name={darkMode ? 'sun' : 'moon'} color={"currentColor"}/>
+            <Icon size={24} name={darkMode ? 'sun' : 'moon'} color={"currentColor"}/>
         </button>
     );
 };

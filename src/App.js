@@ -5,8 +5,8 @@ import MainLayout from './layouts/MainLayout'; // Correct import path
 import { routes } from './routes';
 import Header from './components/Header/Header';
 import useThemeStore from "./stores/themeStore";
-
 function App() {
+
     const {darkMode} = useThemeStore();
     return (
         <div className={darkMode ? "page-container dark" : "page-container"}>
