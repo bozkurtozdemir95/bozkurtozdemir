@@ -3,6 +3,7 @@ import useThemeStore from "../../stores/themeStore";
 import Icon from "../Icon/Icon";
 import {addNewLine} from "../../utils/utils";
 import photo from '../../assets/img/pp.png';
+import resume from '../../assets/BozkurtOzdemirCV.pdf';
 const Sidebar = () => {
     const {darkMode} = useThemeStore();
 
@@ -67,11 +68,11 @@ const Sidebar = () => {
                     ))}
                 </div>
 
-                <button
-                    className={'mt-8 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800'}>
+                <a href={resume} download="BozkurtOzdemirCV.pdf"
+                    className={'mt-8 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-base px-5 py-3.5 text-center inline-flex items-center me-2 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800'}>
                     <Icon className={'transition-all mr-4'} name={'download'} size={22} color={'white'}/>
-                    <span className={`text-md font-body inline-flex ${darkMode ? 'text-white' : 'text-slate-900'}`}>Download CV</span>
-                </button>
+                    <span className={`text-md font-body inline-flex text-white`}>Download CV</span>
+                </a>
 
             </div>
         </div>
