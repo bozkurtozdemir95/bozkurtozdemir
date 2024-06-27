@@ -103,7 +103,7 @@ const ResumePage = () => {
                             </div>
                             <div
                                 className={`${darkMode ? 'bg-slate-800' : 'bg-slate-200'} w-full rounded-full h-1.5`}>
-                                <div className={' h-1.5 rounded-full bg-lime-500'}
+                                <div className={' h-1.5 rounded-full bg-lime-500 transition-all'}
                                      style={{width: skill.value + '%'}}></div>
                             </div>
                         </div>

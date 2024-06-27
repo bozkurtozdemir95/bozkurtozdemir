@@ -21,8 +21,8 @@ const Menu = () => {
                             <li key={'menu'+i}>
                                 <NavLink to={e.path}  className={ ({ isActive }) => classNames('w-16 h-16 flex flex-col items-center justify-center text-center rounded-lg p-3', {
                                        'bg-lime-500 text-white': isActive,
-                                       'bg-slate-700 text-slate-400': !isActive && darkMode,
-                                       'bg-slate-300 text-slate-800': !isActive && !darkMode,
+                                       'bg-slate-700 text-slate-400 hover:bg-lime-300 hover:text-slate-800': !isActive && darkMode,
+                                       'bg-slate-300 text-slate-800 hover:bg-lime-200': !isActive && !darkMode,
                                    })}>
                                     <Icon name={e.icon} color={"currentColor"}/>
                                     <span className={classNames('mt-1 text-xs font-semibold')}>{t(e.name)}</span>
