@@ -1,21 +1,24 @@
 import React from 'react';
 import useThemeStore from "../../stores/themeStore";
 import Icon from "../Icon/Icon";
-import {classNames} from "../../utils/utils";
+import Button from '../../ui/button';
 
 const ThemeSwitcher = () => {
     const {darkMode, toggleDarkMode} = useThemeStore();
 
     return (
-        <button
+        <>
+        <Button
             onClick={toggleDarkMode}
-            className={classNames('p-4 rounded-full transition-all', {
-                'bg-slate-100 text-slate-900 hover:bg-slate-200': !darkMode,
-                'bg-slate-900 text-white hover:bg-slate-700': darkMode,
-            })}
+            isIconButton={true}
+            color={"secondary"}
+            size={"lg"}
+            className={"ml-4"}
+            radius='full'
         >
             <Icon size={24} name={darkMode ? 'sun' : 'moon'} color={"currentColor"}/>
-        </button>
+        </Button>
+        </>
     );
 };
 

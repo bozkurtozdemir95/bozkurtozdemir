@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import Sidebar from "../components/Sidebar/Sidebar";
-import Menu from "../components/Menu/Menu";
 
 const MainLayout = ({children}) => {
 
@@ -27,14 +26,9 @@ const MainLayout = ({children}) => {
                     className={`grid ${isMediumScreen ? 'w-full col-span-12' : 'col-span-3 sticky top-0 h-fit pt-48 -mt-48'}`}>
                     <Sidebar/>
                 </div>
-                <div className="grid col-span-12 xl:col-span-8 h-fit">
+                <div className="grid col-span-12 xl:col-span-9 h-fit">
                     {children}
                 </div>
-                {!isMediumScreen &&
-                    <div className="grid col-span-1 sticky top-0 h-fit">
-                        <Menu/>
-                    </div>
-                }
             </div>
         </div>
     );

@@ -2,9 +2,11 @@ import React, {useEffect, useState} from 'react'
 import useThemeStore from "../../stores/themeStore";
 import Icon from "../Icon/Icon";
 import {addNewLine} from "../../utils/utils";
-import photo from '../../assets/img/pp.png';
+import photo from '../../assets/img/untitled2.png';
 import resume from '../../assets/BozkurtOzdemirCV.pdf';
 import {useTranslation} from "react-i18next";
+import Button from '../../ui/button';
+import Card from '../../ui/card';
 
 const Sidebar = () => {
     const {darkMode} = useThemeStore();
@@ -43,11 +45,11 @@ const Sidebar = () => {
 
 
     return (
-        <div className={`p-8 rounded-2xl ${
-            darkMode ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
-        }`}>
+
+       
+        <Card padding='md' className="rounded-2xl">
             <div className="flex flex-col flex-wrap items-center justify-center">
-                <img src={photo} className={` mb-8 object-contain rounded-2xl md:object-scale-down ${isMediumScreen ? 'w-60' : '-mt-48'}`}
+                <img src={photo} className={` mb-8 object-cover rounded-2xl md:object-cover h-60 ${isMediumScreen ? 'h-60' : '-mt-48'}`}
                      alt={'Bozkurt Ozdemir'}/>
                 <h2 className={`text-3xl font-bold font-title inline-flex mb-4 ${darkMode ? 'text-white' : 'text-slate-900'}`}>Bozkurt
                     Ozdemir</h2>
@@ -62,7 +64,7 @@ const Sidebar = () => {
                         </a>
                     ))}
                 </div>
-                <div className={`${darkMode ? 'bg-slate-800' : 'bg-slate-200'}  py-6 px-8 rounded-2xl w-full`}>
+                <Card padding='md' className='w-full'>
                     {information.map((information) => (
                         <div
                             key={'info'+information.id}
@@ -84,16 +86,15 @@ const Sidebar = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </Card>
 
-                <a href={resume} download="BozkurtOzdemirCV.pdf"
-                   className={'mt-8 text-white bg-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-base px-5 py-3.5 text-center inline-flex items-center me-2 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800'}>
+                <Button color='success' href={resume} download="BozkurtOzdemirCV.pdf"
+                   className={'mt-8 font-medium rounded-lg text-center inline-flex items-center me-2'}>
                     <Icon className={'transition-all mr-4'} name={'download'} size={22} color={'white'}/>
-                    <span className={`text-md font-body inline-flex text-white`}>{t("DownloadCV")}</span>
-                </a>
-
+                    <span className={`text-md font-body inline-flex`}>{t("DownloadCV")}</span>
+                </Button>
             </div>
-        </div>
+        </Card>
 
     );
 };
