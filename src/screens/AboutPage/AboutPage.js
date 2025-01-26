@@ -8,11 +8,12 @@ const AboutPage = () => {
     const {darkMode} = useThemeStore();
      const { t } = useTranslation();
      const experiences = [
-         {id: 1, position: 'Frontend Developer', company: 'One Inside', location: 'Skopje', start: '2023', end: '2024'},
+         {id: 1, position: 'Frontend Developer', company: 'One Inside',  url: 'https://one-inside.com/', location: 'Skopje', start: '2023', end: '2024'},
          {
              id: 2,
              position: 'Frontend Developer',
              company: 'Falcon Gaming',
+             url: 'https://falcongaming.io/',
              location: 'Skopje',
              start: '2021',
              end: '2022'
@@ -26,7 +27,7 @@ const AboutPage = () => {
              end: '2021'
          },
          {id: 4, position: 'UI Developer', company: 'Lucky Gaming', location: 'Tbilisi', start: '2019', end: '2020'},
-         {id: 5, position: 'UI Developer', company: 'Ses Gaming', location: 'Batumi', start: '2018', end: '2019'},
+         {id: 5, position: 'UI Developer', company: 'Ses Gaming', url: 'https://sesgaming.io/', location: 'Batumi', start: '2018', end: '2019'},
          {id: 6, position: 'UI Developer', company: 'S Yazılım', location: 'Istanbul', start: '2015', end: '2018'},
      ];
  
@@ -125,6 +126,11 @@ const AboutPage = () => {
                             <h5 className={`text-xl font-body inline-flex mb-2 ${darkMode ? 'text-white' : 'text-slate-900'}`}>{experience.company}<span
                                 className={`${darkMode ? 'text-slate-300' : 'text-slate-600'}  ml-2 text-lg`}> - {t(experience.location)}</span>
                             </h5>
+
+                            <a href={experience.url} target='_blank' className={`text-xs font-body inline-flex mb-2 
+                                ${darkMode ? 'text-white' : 'text-slate-900'} ${experience.url ? 'opacity-100' : 'opacity-40 cursor-normal'}`}>
+                                {experience.url ? t("VisitWebsite") : t("NoActiveWebsite")}
+                            </a>
                             <p className={`${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>{experience.position}</p>
                         </div>
                     </div>

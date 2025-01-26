@@ -31,6 +31,8 @@
     "Email": "Email",
     "Message": "Message",
     "Submit": "Submit",
-    "DownloadCV": "Download CV"
+    "DownloadCV": "Download CV",
+    "VisitWebsite": "Visit Website",
+    "NoActiveWebsite": "Not active"
   }
 }

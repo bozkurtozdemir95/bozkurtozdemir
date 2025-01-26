@@ -31,6 +31,8 @@
     "Email": "Email",
     "Message": "Mesaj",
     "Submit": "Gönder",
-    "DownloadCV": "CV İndir"
+    "DownloadCV": "CV İndir",
+    "VisitWebsite": "Siteyi ziyaret et",
+    "NoActiveWebsite": "Aktif değil"
   }
 }
